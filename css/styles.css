@@ -1,0 +1,14 @@
+.flex-container{width: 1000px;border: solid black 1px;display: flex;}
+.item{height: 100px;width:100px;border: solid black 1px;display: flex;
+font-size: 50px;justify-content: center;align-items: center;}
+.club{display: flex;}
+.one{justify-content: space-between;}
+.three{justify-content: space-between;}
+.four{justify-content: space-between;}
+.five{justify-content: end;flex-direction: row-reverse;}
+.six{justify-content: space-between;}
+.seven{justify-content: space-between;}
+.red{background-color: rgba(187, 178, 53, 0.993);}
+.blue{background-color: blue;}
+.green{background-color: darkcyan;}
+.yellow{background-color: blue;width: 400px;}

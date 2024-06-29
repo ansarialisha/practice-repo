@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+    <body>
+        <div x-data="{ isVisible: true }">
+            <button @click="isVisible = !isVisible">Toggle</button>
+    
+            <div x-show="isVisible">
+                This content is shown when isVisible is true.
+            </div>
+    
+            <div x-show="!isVisible">
+                This content is shown when isVisible is false.
+            </div>
+        </div>
+
+        
+        <div x-data="{ isVisible: true }">
+            <img src="images/moon.png" height="100" width="100" x-show="isVisible">
+            <button @click="isVisible = !isVisible">Toggle Image</button>
+        </div>
+
+        <h1 x-data="{ message: 'I ❤️ Alpine.' }" x-text="message"></h1>
+
+
+        <div x-data="{ placeholder: 'Type here...' }">
+            <input type="text" x-bind:placeholder="placeholder">
+        </div>
+       
+        
+        
+    </body>
+</html>

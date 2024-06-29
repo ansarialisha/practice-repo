@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/quizstyles.css">
+    </head>
+    <body>
+        <div class="main-parent">
+            <div class="child-1">
+                <h1>QUIZ</h1>
+            </div>
+            <p>Share your thoughts with us!We value your input.Let us know how we can enhance your experience.</p>
+            <div class="child-2">
+                <h3>1.What does HTML stand for?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">Hyper Text Making Label</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Home Tool Markup Legend</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Hyper Text Markup Language</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Hyperlinks and Text Markup Language</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>2.What does CSS stand for?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">Cascading Style Sheet</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Colored Special Sheet</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Color ans Style Sheet</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">None of the above</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>3.In how many ways can CSS be written in?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">1</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">2</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">3</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">4</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>4.What type of CSS is generally recommended for designing large web pages?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">Inline</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">External</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">On page</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">None of the above</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>5.How can we write comments in Javascript?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">#</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">/**/</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">$</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">//</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>6.We can make rounded borders around elements using which CSS element?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">border-collapse</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">rounded-border</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">border-radius</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">None of the above</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>7.How many sizes of headers are available in HTML by default?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">5</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">1</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">3</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">6</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>8.What are the types of lists available in HTML?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">Orderd,Unorderd List</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Bulleted,Numbered List</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Named,Unnamed List</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">None of the above </li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>9.We enclose HTML tags within?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">{ }</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">< ></li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">! !</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">[ ]</li>
+                </ul>
+            </div>
+            <div class="child-2">
+                <h3>10.Which attribute is used to provide a unique name to an HTML element?</h3>
+                <ul class="ul-list">
+                    <li class="unchecked" onClick="addCheckedClass(this)">ID</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Class</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">Type</li>
+                    <li class="unchecked" onClick="addCheckedClass(this)">None of the above</li>
+                </ul>
+            </div>
+            <div class="child-3">
+                <button class="button" onClick="checkAnswers()">Check your score</button>
+                <div class="score">score:</div> 
+                <div class="result"></div>
+            </div>
+        </div>           
+        <script>
+           
+            function addCheckedClass(selectedOption){
+                const options = selectedOption.parentElement.querySelectorAll('.unchecked');
+                options.forEach(option => option.classList.remove('checked'));
+                selectedOption.classList.add('checked');
+
+                
+            }
+            
+            function checkAnswers() {
+                let questions = document.querySelectorAll('.child-2');
+                let score = 0;
+                const correctAnswers = [2,0,3,1,3,2,3,0,1,0];
+
+                questions.forEach((question, index) => {
+                    const selectedOption = question.querySelector('.checked');
+                    const options = question.querySelectorAll('.unchecked');
+                    
+                    if (selectedOption) {
+                        const selectedAnswerIndex = Array.from(options).indexOf(selectedOption);
+                        if (selectedAnswerIndex === correctAnswers[index]) {
+                            score++;
+                            selectedOption.classList.add('correctAnswer');
+                            let tick = document.createElement('span');
+                            tick.classList.add('tick');
+                            selectedOption.appendChild(tick);
+                        } else {
+                            selectedOption.classList.add('incorrectAnswer');
+                            const correctOption = options[correctAnswers[index]];
+                            correctOption.classList.add('correctAnswer');
+                            let cross = document.createElement('span');
+                            cross.classList.add('cross');
+                            selectedOption.appendChild(cross);
+
+                            let correctTick = document.createElement('span');
+                            correctTick.classList.add('tick');
+                            correctOption.appendChild(correctTick);
+
+                        }
+                    }else {
+                            const correctOption = options[correctAnswers[index]];
+                            correctOption.classList.add('correctAnswer');
+                            let correctTick = document.createElement('span');
+                            correctTick.classList.add('tick');
+                            correctOption.appendChild(correctTick);
+                    } 
+                });
+
+                const totalQuestions = questions.length;
+                const scorePercentage = (score / totalQuestions) * 100;
+
+                const scoreDisplay = document.querySelector('.result');
+                scoreDisplay.innerHTML =  score + '/' + totalQuestions + ' (' + scorePercentage.toFixed(2) + '%)';
+
+                const resultDisplay = document.querySelector('.result');
+                if (score === totalQuestions) { 
+                    resultDisplay.innerHTML += '<br>Congratulations! You got all the answers correct!';
+                } else {
+                    resultDisplay.innerHTML += '<br>Keep practicing!';
+                }
+            }
+
+        </script>
+    </body>
+</html>

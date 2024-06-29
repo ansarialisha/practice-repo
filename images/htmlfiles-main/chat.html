@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/chatstyles.css">
+    </head>
+    <body>
+        <div class="main-parent">
+            <div class="child-1">
+                <ul class="ul-list"></ul>
+                <ul class="ul-list-2"></ul>
+            </div>
+            <div class="child-2">
+                <div class="user-1">
+                    <input type="text" class="input-value">
+                    <button  onClick="sendMessagesFromUser1()">Send</button>
+                </div>
+                <div class="user-2">
+                    <input type="text" class="input-value-1">
+                    <button  onClick="sendMessagesFromUser2()">Send</button> 
+                </div>
+            </div>
+        </div>       
+        <script>
+            function sendMessagesFromUser1(){
+              let inputValue = document.querySelector(".input-value").value;
+              document.querySelector(".input-value").value = '';
+              let result = document.querySelector(".ul-list").innerHTML += inputValue + '<br>';
+            }
+            function sendMessagesFromUser2(){
+              let inputValue = document.querySelector(".input-value-1").value;
+              document.querySelector(".input-value-1").value = '';
+              let result = document.querySelector(".ul-list-2").innerHTML += inputValue + '<br>';
+            }
+
+           
+        </script> 
+         
+
+         
+    </body>
+
+</html>
+           

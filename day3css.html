@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="todo-app">
+                <h1 class="raleway-uniquifier">Todo List{Program Of Operations}</h1>
+                <input type="text" placeholder="Task name" class="raleway-uniquifier input-task">
+                <button  class="button" onClick="AddTask()">Add</button>
+            </div>
+            <div class="second-child raleway-uniquifier">
+                <ul class="list-container">
+                </ul>
+            </div>
+        </div>
+        <script>
+            var inputtask = document.querySelector(".input-task");
+            var listcontainer = document.querySelector(".list-container");
+
+            function AddTask(){
+                if(inputtask.value == " "){
+                    alert("You must write something!");
+                } else{
+                    var li = document.createElement("li");
+                    li.innerHTML = inputtask.value;
+                    listcontainer.appendChild(li);
+                }
+                inputtask.value = ' ';
+            }
+        </script>
+    </body>
+</html>

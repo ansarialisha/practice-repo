@@ -1,0 +1,62 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#181717 ;
+}
+.todo-app{
+    width:700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left:150px;
+    position: relative;
+}
+h1{
+    background: linear-gradient(to right,#FC42B4,#AE5FCE,#6082EF,#3793FF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+input{
+    width:500px;
+    height:65px;
+    border-radius: 10px;
+    background-color: #525050;
+    padding:0 120px 0 20px;
+    border: #181717;
+    font-size:25px;
+}
+.button{
+    background-color:#151515;
+    width: 90px ;
+    height:50px;
+    border-radius: 10px;
+    border:#525050 1px solid ;
+    position: absolute;
+    right: 107px;
+    top: 107px;
+    color: #BABABA;
+    cursor: pointer;
+}
+.second-child{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.list-container{
+    font-size:25px;
+    color:#BABABA ;
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    left: 250px;
+}
+.raleway-uniquifier {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}

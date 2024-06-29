@@ -1,0 +1,65 @@
+.flex-container{
+    height: 440px;
+    width:22%;
+    background-color:rgba(16, 16, 51, 0.598);
+    border-radius:10px;
+    
+}
+.box-1{
+    height: 50px;
+    width: 50px;
+    border-radius:10px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content:center;
+    align-items: center;
+    border:1px solid black;
+    margin-bottom:3px;
+    
+}
+.item{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    
+}
+.item-1{
+    display: flex;
+    width:75%;
+    justify-content: space-evenly;
+}
+.item-2{
+    width:100%;
+    float: right;
+   margin-top:-108px;
+   display: flex;
+   
+   
+}
+.radious-0{
+    border-radius:20px 10px 10px 10px;
+}
+.radious-1{
+    border-radius:10px 20px 10px 10px;
+}
+.radious-2{
+    border-radius:10px 10px 10px 20px;
+}
+.radious-3{
+    border-radius:10px 10px 20px 10px;
+    background-color:crimson;
+    height:105px;
+    width:21%;
+    position: absolute;
+    right: 5px;  
+}
+
+.display-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height:225px;
+    position: relative;
+}
+
